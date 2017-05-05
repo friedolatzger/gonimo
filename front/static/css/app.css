@@ -1484,9 +1484,10 @@ canvas {
 	text-transform:uppercase;
 	color:#CDA4B4;
 	border:solid 3px #CDA4B4;
-	width:45%;
+	width:40%;
 	display:inline-block;
 	padding:2.5% 0%;
+  margin-right: 2.5%;
 }
 .notification.right-btn{
 	font-family:Raleway-Regular;
@@ -1494,9 +1495,10 @@ canvas {
 	text-transform:uppercase;
 	color:#5C5D5F;
 	border:solid 3px #5C5D5F;
-	width:45%;
+	width:40%;
 	display:inline-block;
 	padding:2.5% 0%;
+  margin-left: 2.5%;
 }
 .notification.single-btn{
 	font-family:Raleway-Regular;

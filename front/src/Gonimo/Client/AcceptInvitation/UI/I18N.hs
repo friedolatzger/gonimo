@@ -2,10 +2,11 @@
 module Gonimo.Client.AcceptInvitation.UI.I18N where
 
 import           Gonimo.I18N
+import Data.Text (Text)
+import Data.Monoid ((<>))
 
 data Message = Family_Invitation
-             | Family_Name
-             | Inviting_Device
+             | The_device_invited_you_to_join Text Text
              | Inviting_User
              | Decline
              | Accept
@@ -15,10 +16,10 @@ data Message = Family_Invitation
 instance I18N Message where
   i18n EN_GB Family_Invitation = "Family Invitation"
   i18n DE_DE Family_Invitation = "Familieneinladung"
-  i18n EN_GB Family_Name = "Family Name:"
-  i18n DE_DE Family_Name = "Familienname:"
-  i18n EN_GB Inviting_Device = "Inviting Device:"
-  i18n DE_DE Inviting_Device = "Einladendes Gerät:"
+  i18n EN_GB (The_device_invited_you_to_join deviceName familyName)
+    = "The device '" <> deviceName <> "' invited you to join family '" <> familyName <> "'!"
+  i18n DE_DE  (The_device_invited_you_to_join deviceName familyName)
+    = "Das Gerät '" <> deviceName <> "' hat dir eine Einladung für die Familie '" <> familyName <> "' gesendet!"
   i18n EN_GB Inviting_User = "Inviting User:"
   i18n DE_DE Inviting_User = "Einladung von:"
   i18n EN_GB Decline = "Decline"
